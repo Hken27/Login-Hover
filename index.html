@@ -1,0 +1,140 @@
+<html <head>
+
+<title>TIARA DEWATA</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor">
+        <div class="cursor__ball cursor__ball--big">
+            <svg height="30" width="30">
+                <circle cx="15" cy="15" r="12"></circle>
+            </svg>
+        </div>
+        <div class="cursor__ball cursor__ball--small">
+            <svg height="10" width="10">
+                <circle cx="5" cy="5" r="4"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+
+            <div class="slide slide1">
+                <div class="content">
+                    <div class="icon">
+                        <img src="tiara.png" alt="User Image" class="icon-image">
+                        <i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="slide slide2">
+
+                <div class="content">
+
+                    <h3>
+
+                        Welcome Back!
+
+                    </h3>
+
+                    <form class="login-form" action="#" method="post" onsubmit="event.preventDefault(); loginAlert()">
+
+                        <div class="input-group">
+                            <i class="fa fa-user"></i>
+                            <input type="username" placeholder="Username" required>
+                        </div>
+
+                        <div class="input-group">
+                            <i class="fa fa-lock"></i>
+                            <input type="password" placeholder="Password" required>
+                            <i class="fa fa-eye toggle-password"></i>
+                        </div>
+
+                        <div class="forgot">
+                            <a href="#">Forgot Password?</a>
+                        </div>
+
+                        <button type="submit" class="btn-login">Login</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+
+<script>
+    document.querySelector('.toggle-password').addEventListener('click', function () {
+        const input = this.previousElementSibling;
+        input.type = input.type === 'password' ? 'text' : 'password';
+        this.classList.toggle('fa-eye-slash');
+    });
+
+    function loginAlert() {
+        Swal.fire({
+            title: 'Login Successful!',
+            text: 'Selamat datang kembali!',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            timer: 2000,
+            timerProgressBar: true
+        });
+        Swal.fire({
+            title: 'Login Gagal!',
+            text: 'Username atau password salah.',
+            icon: 'error',
+            confirmButtonText: 'Coba Lagi'
+        });
+    }
+
+    // GSAP Animations
+    const $bigBall = document.querySelector('.cursor__ball--big');
+    const $smallBall = document.querySelector('.cursor__ball--small');
+    const $hoverables = document.querySelectorAll('.btn-login, .input-group input');
+
+    // Move the cursor
+    document.body.addEventListener('mousemove', e => {
+        gsap.to($bigBall, { duration: 0.4, x: e.pageX - 15, y: e.pageY - 15 });
+        gsap.to($smallBall, { duration: 0.1, x: e.pageX - 5, y: e.pageY - 7 });
+    });
+
+    // --- Hover effects ---
+    hoverables.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            gsap.to(bigBall, { duration: 0.3, scale: 4 });
+            gsap.to(bigBall.querySelector('circle'), { duration: 0.3, fill: "#e86554" });
+        });
+        el.addEventListener('mouseleave', () => {
+            gsap.to(bigBall, { duration: 0.3, scale: 1 });
+            gsap.to(bigBall.querySelector('circle'), { duration: 0.3, fill: "#f7f8fa" });
+        });
+    });
+
+</script>
+
+
+</html>

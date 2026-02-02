@@ -510,4 +510,18 @@ body {
         font-size: 12px;
     }
 
+    .input-group input {
+        height: 42px;
+        padding-left: 38px;
+        padding-right: 38px;
+    }
+
+    .input-group i {
+        left: 12px;
+    }
+
+    .input-group .toggle-password {
+        right: 12px;
+    }
+
 }    

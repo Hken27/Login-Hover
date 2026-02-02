@@ -510,18 +510,27 @@ body {
         font-size: 12px;
     }
 
-    .input-group input {
-        height: 42px;
-        padding-left: 38px;
-        padding-right: 38px;
-    }
-
     .input-group i {
         left: 12px;
     }
 
     .input-group .toggle-password {
         right: 12px;
+    }
+
+    .input-group {
+        max-width: 100%;
+    }
+
+    .input-group input {
+        height: 44px;
+        padding-left: 38px;
+        padding-right: 38px;
+    }
+
+    .input-group i.fa-user,
+    .input-group i.fa-lock {
+        left: 12px;
     }
 
 }    

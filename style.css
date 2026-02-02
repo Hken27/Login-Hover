@@ -501,4 +501,13 @@ body {
         font-size: 15px;
     }
 
+    .login-form {
+        max-width: 100%;
+        padding: 0 12px;
+    }
+
+    .forgot a {
+        font-size: 12px;
+    }
+
 }    

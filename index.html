@@ -126,13 +126,15 @@
     hoverables.forEach(el => {
         el.addEventListener('mouseenter', () => {
             gsap.to(bigBall, { duration: 0.3, scale: 4 });
-            gsap.to(bigBall.querySelector('circle'), { duration: 0.3, fill: "#e86554" });
+            gsap.to(bigBall.querySelector('circle'), { duration: 0.3, fill: "#000000" });
         });
         el.addEventListener('mouseleave', () => {
             gsap.to(bigBall, { duration: 0.3, scale: 1 });
-            gsap.to(bigBall.querySelector('circle'), { duration: 0.3, fill: "#f7f8fa" });
+            gsap.to(bigBall.querySelector('circle'), { duration: 0.3, fill: "#ffffff" });
         });
     });
+
+
 
 </script>
 

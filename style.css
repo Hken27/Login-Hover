@@ -46,7 +46,7 @@ body {
 }
 
 .cursor__ball circle {
-    fill: #f7f8fa;
+    fill: #000;
 }
 
 .cursor__ball--big {
@@ -71,7 +71,7 @@ body {
 }
 
 .cursor__ball circle {
-    fill: #f7f8fa;
+    fill: #fff;
 }
 
 .cursor__ball--big {
@@ -171,7 +171,7 @@ body {
 
     width: 425px;
 
-    height: 310px;
+    height: 320px;
 
     /* transition: 0.5s; */
     /* transition: opacity .6s ease-in-out, transform .6s cubic-bezier(.4,0,.2,1); */
@@ -244,9 +244,9 @@ body {
 
     width: 30px;
 
-    height: 4px;
+    height: 6px;
 
-    bottom: 15px;
+    bottom: 17px;
 
     left: 50%;
 
@@ -276,7 +276,7 @@ body {
 
 .container .card .slide.slide2 .content h3 {
 
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
 
     padding: 0;
 

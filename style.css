@@ -411,9 +411,11 @@ body {
 
     .container .card .slide {
 
-        width: 370px;
+        /* width: 370px;
 
-        height: 315px;
+        height: 315px; */
+
+        max-width: 360px;
 
     }
 
@@ -443,7 +445,7 @@ body {
 
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
 
     .container .card .slide {
 
@@ -477,4 +479,24 @@ body {
 
     }
 
-}
+} */
+
+
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .container .card .slide {
+        max-width: 100%;
+        min-height: 260px;
+    }
+
+    .btn-login {
+        padding: 12px;
+        font-size: 15px;
+    }

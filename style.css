@@ -17,12 +17,10 @@ body {
     /* background-color: #fbfaf9; */
 
     background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.15), 
-            rgba(0, 0, 0, 0.15)
-        ),
+        linear-gradient(rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.15)),
         url("tiara-bg.png");
-    
+
     /* opacity: 0.3; */
 
 
@@ -109,12 +107,14 @@ body {
 
 /* Image default (sembunyi) */
 .icon-image {
-    width: 310px;
-    height: 310px;
+    width: 210px;
+    height: 210px;
+    /* mix-blend-mode: multiply; */
     object-fit: contain;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
-    filter: brightness(0) invert(1) contrast(1.2);
+    /* filter: brightness(0) invert(1) contrast(1.2); */
+    filter: none;
 }
 
 /* Saat hover card */
@@ -131,30 +131,30 @@ body {
 .container .card .icon {
 
     /* position: relative; */
-    
+
     position: absolute;
 
     top: 0;
-    
+
     left: 0;
-    
+
     width: 100%;
-    
+
     height: 100%;
 
     background: #7a321a;
-    
+
     border-radius: 8px;
 
     /* overflow: hidden; */
     overflow: visible;
-    
+
 }
 
 .container .card .icon .fa {
-    
+
     /* position: relative; */
-    
+
     position: absolute;
 
     top: 50%;
@@ -173,9 +173,9 @@ body {
 
     border-radius: 8px;
 
-    width: 425px;
+    width: 430px;
 
-    height: 320px;
+    height: 315px;
 
     /* transition: 0.5s; */
     /* transition: opacity .6s ease-in-out, transform .6s cubic-bezier(.4,0,.2,1); */
@@ -200,7 +200,7 @@ body {
 
     transition: .8s;
 
-    transform: translateY(135px);
+    transform: translateY(105px);
 
 }
 
@@ -242,29 +242,11 @@ body {
 
 .container .card .slide.slide2::after {
 
-    /* content: "";
-
-    position: absolute;
-
-    width: 30px;
-
-    height: 6px;
-
-    bottom: 17px;
-
-    left: 50%;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    background: #7a321a; */
-
     content: "";
     position: absolute;
     width: 30px;
     height: 6px;
-    bottom: 17px;
+    bottom: 7px; /* dikurangi agar sedikit kebawah */
     left: 50%;
     transform: translateX(-50%);
     background: #7a321a;
@@ -351,6 +333,24 @@ body {
     box-shadow: 0 0 0 4px rgba(108, 99, 255, .12);
 }
 
+/* Form check */
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.form-check a {
+    font-size: 11px;
+    text-decoration: none;
+    color: #383745;
+}
+
+.form-check a:hover {
+    text-decoration: underline;
+}
+
+
 /* Forgot password */
 .forgot {
     text-align: right;
@@ -381,8 +381,8 @@ body {
 
 /* Button modern */
 .btn-login {
-    margin-top: 6px;
-    padding: 14px;
+    margin-top: 8px;
+    padding: 13px;
     border-radius: 14px;
     border: none;
     /* background: linear-gradient(135deg, #ed5625, #dfa92c); */
@@ -417,6 +417,11 @@ body {
     .btn-login {
         padding: 11px 12px;
     }
+
+    .form-check a {
+        font-size: 12px;
+    }
+
 }
 
 /* --- Responsive adjustments --- */
@@ -523,6 +528,10 @@ body {
         font-size: 12px;
     }
 
+    .form-check a {
+        font-size: 12px;
+    }
+
     .input-group i {
         left: 12px;
     }
@@ -546,4 +555,4 @@ body {
         left: 12px;
     }
 
-}    
+}
